@@ -5,7 +5,7 @@ import { styles } from "./styles"
 export function Home() {
 
   function handleParticipantAdd() {
-    console.log('Adicionar participante')
+    console.log('add new participant')
   }
 
   return (
