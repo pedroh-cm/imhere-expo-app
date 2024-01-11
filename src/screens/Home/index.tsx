@@ -44,7 +44,7 @@ export function Home() {
         Nome do evento
       </Text>
       <Text style={styles.eventDate}>
-        Sexta, 9 de Janeiro de 2024
+        Sexta, 10 de Janeiro de 2024
       </Text>
 
       <View style={styles.form}>
