@@ -10,12 +10,12 @@ export function Home() {
   const [participantName, setParticipantName] = useState('');
 
   function handleParticipantAdd() {
-    if (participantName === '') {
-      return Alert.alert('Nome inválido', 'O nome do participante não pode ser vazio.')
+    if (participantName.trim() === '') {
+      return Alert.alert('Nome inválido', 'O nome do participante não pode ser vazio.');
     }
 
     if (participants.includes(participantName)) {
-      return Alert.alert('Participante existente', 'Já existe um participante com esse nome.')
+      return Alert.alert('Participante existente', 'Já existe um participante com esse nome.');
     }
 
     setParticipants(prevState => [...prevState, participantName]);
@@ -32,7 +32,7 @@ export function Home() {
         text: 'Sim',
         style: 'default',
         onPress: () => {
-          console.log('Remover')
+          setParticipants(prevState => prevState.filter(participant => participant !== name));
         }
       }
     ])
@@ -41,10 +41,10 @@ export function Home() {
   return (
     <View style={styles.container}>
       <Text style={styles.eventName}>
-        Nome do evento
+        React Native Conference
       </Text>
       <Text style={styles.eventDate}>
-        Sexta, 9 de Janeiro de 2024
+        Sexta, 11 de Janeiro de 2024
       </Text>
 
       <View style={styles.form}>
